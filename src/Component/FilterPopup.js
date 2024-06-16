@@ -32,7 +32,6 @@ const FilterPopup = ({ isOpen, data, onClose, onApplyFilters }) => {
   ];
   const statuses = ["Show all", "Public", "Private", "Disable", "Draft"];
 
-  // State to store applied filters
   const [appliedFilters, setAppliedFilters] = useState([]);
 
   const handleSectionClick = (section) => {
