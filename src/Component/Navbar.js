@@ -21,6 +21,11 @@ import subscription from "../assets/subscription.png";
 import order from "../assets/order.png";
 import timeStamp from "../assets/timestamp.png";
 import reverse from "../assets/reverse.png";
+import Avatar from "@mui/material/Avatar";
+import HelpIcon from "@mui/icons-material/Help";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { deepPurple } from '@mui/material/colors';
 
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
@@ -239,7 +244,117 @@ export default function MiniDrawer() {
               <ListItemText primary="Waitlist" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
         </List>
+        <List>
+           <ListItem key="dashboard" disablePadding sx={{ display: "block" }}>
+          <ListItemButton
+            sx={{
+              minHeight: 48,
+              justifyContent: open ? "initial" : "center",
+              px: 2.5,
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                minWidth: 0,
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}
+            >
+              <DashboardIcon
+                sx={{ width: 15, height: 15, opacity: open ? 1 : 0 }}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+            <ListItemIcon
+              sx={{
+                minWidth: 0,
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}
+            >
+              {open ? (
+                <OpenInNewIcon sx={{ width: 15, height: 15, marginLeft: 3 }} />
+              ) : (
+                <OpenInNewIcon sx={{ width: 15, height: 15, marginLeft: -4 }} />
+              )}
+            </ListItemIcon>
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="admin" disablePadding sx={{ display: "block" }}>
+          <ListItemButton
+            sx={{
+              minHeight: 48,
+              justifyContent: open ? "initial" : "center",
+              px: 2.5,
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                minWidth: 0,
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}
+            >
+             <Avatar sx={{ width: 15, height: 15,bgcolor: deepPurple[500] }}>SK</Avatar>
+            </ListItemIcon>
+            <ListItemText primary="Sonali Kumari" sx={{ opacity: open ? 1 : 0 }} />
+            
+          </ListItemButton>
+        </ListItem>
+        <ListItem key="help" disablePadding sx={{ display: "block" }}>
+          <ListItemButton
+            sx={{
+              minHeight: 48,
+              justifyContent: open ? "initial" : "center",
+              px: 2.5,
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                minWidth: 0,
+                mr: open ? 3 : "auto",
+                justifyContent: "center",
+              }}
+            >
+              <HelpIcon sx={{ width: 15, height: 15 }} />
+            </ListItemIcon>
+            <Box sx={{ display: "flex", flexDirection: "column", flex: 1 }}>
+              <ListItemText
+                primary="Help Center"
+                sx={{
+                  opacity: open ? 1 : 0,
+                  fontWeight: "bold",
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              />
+              <ListItemText
+                primary="@2024 Omnify.Inc."
+                sx={{
+                  opacity: open ? 1 : 0,
+                  display: "block",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  color: (theme) => theme.palette.text.secondary,
+                  fontWeight: 300,
+                }}
+              />
+            </Box>
+          </ListItemButton>
+        </ListItem>
+        </List>
+       
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Typography paragraph>
