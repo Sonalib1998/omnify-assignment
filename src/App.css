@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+input[type="checkbox"] {
+  accent-color: black;
+}
+input[type="radio"] {
+  accent-color: black;
+}
+.applied-filters {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.chip-item {
+  margin-right: 8px;
+  padding: 4px 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.chip-remove {
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.chip-type {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
   color: white;
+  font-size: 0.75rem;
 }
 
-.App-link {
-  color: #61dafb;
+.green {
+  background-color: #f8f8f8;
+  color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mustard {
+  background-color: #f8f8f8;
+
+  color: rgb(255, 166, 0);
+}
+
+.chip-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #333;
+  background-color: #f8f8f8;
+}
+.tag {
+  background-color: #f8f8f8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #424242;
+  margin-left: auto;
+  text-transform: capitalize;
 }
